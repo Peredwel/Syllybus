@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./Form.js"></script>
+    <title>Create Syllabus</title>
+</head>
+<header>
+    <h1> Course Syllabus Creation</h1>
+</header>
+
+<body>
+<form id="syllabus" action = "" method="post">
+    <label for="courseName">Subject: </label>
+    <input id = "courseName" type="text" name="courseName" placeholder="Course subject ex. Computer Science" required>
+    <label for="courseNumber">Course Number: </label>
+    <input id="courseNumber" type="text" name="courseNumber" placeholder="Course Number ex. 1033" required>
+    <label for = "Term"> Term: </label>
+    <input id = "Term" type="text" name="Term" placeholder="Term ex. Summer 2017" required>
+    <label for="url">Course Website: </label>
+    <input id = "url" type="text" name="url">
+    <fieldset>
+        <legend><strong> Course Description </strong> </legend>
+        <textarea id="courseDescript" form = "syllabus" name="courseDescript" rows = 10 cols = 100 required placeholder =
+"This course is an introduction to multimedia and explores the use of different types of media components (text, images, sound, animation and video) to convey ideas and facilitate interaction delivered through a web site. Topics include design considerations and media creation/editing tools for creating websites, graphics, sound, animation and video files. This course has a theoretical and a practical component. Media components will be studied at a theoretical level, and students will have the opportunity to practice their skills by using software to create graphics, animation, movies, and web sites."
+       >
+        </textarea>
+    </fieldset>
+    <fieldset>
+        <legend> <strong>Prerequisites</strong></legend>
+        <ul>
+            <li>
+                <input type = "text" name = "prerequisite" placeholder = "ex. None">
+            </li>
+        </ul>
+        <h4> Statement on checking prerequisites:</h4>
+        <p>
+            Unless you have either the requisites for this course or written special permission from your
+            Dean to enroll in it, you may be removed from this course and it will be deleted from your
+            record. This decision may not be appealed. You will receive no adjustment to your fees in the
+            event that you are dropped from a course for failing to have the necessary prerequisites.
+        </p>
+    </fieldset>
+    <!--Should have a javascript that asks whether the course is on-campus, distance, or off-campus, and then
+     gives options accordingly-->
+    <fieldset>
+        <legend><strong>Location and Meeting Times</strong></legend>
+
+        <table style="width: 100%">
+            <tr>
+                <th>Day</th>
+                <th>Start Time</th>
+                <th> End Time</th>
+                <th> Location</th>
+            </tr>
+            <tr>
+                <td>Monday: <input type="checkbox" name = "Mon" id = "mon"></td>
+                <td>
+                    <input type="text" list="starttimes" name = "day1start" id="Day1start">
+                        <datalist id="starttimes">
+                            <option>8:30 AM</option>
+                            <option>9:00 AM</option>
+                            <option>9:30 AM</option>
+                            <option>10:00 AM</option>
+                            <option>10:30 AM</option>
+                            <option>11:00 AM</option>
+                            <option>11:30 AM</option>
+                            <option>12:00 AM</option>
+                            <option>12:30 AM</option>
+                            <option>1:00 PM</option>
+                            <option>1:30 PM</option>
+                            <option>2:00 PM</option>
+                            <option>2:30 PM</option>
+                            <option>3:00 PM</option>
+                            <option>3:30 PM</option>
+                            <option>4:00 PM</option>
+                            <option>4:30 PM</option>
+                            <option>5:00 PM</option>
+                            <option>5:30 PM</option>
+                            <option>6:00 PM</option>
+                            <option>6:30 PM</option>
+                            <option>7:00 PM</option>
+                            <option>7:30 PM</option>
+                            <option>8:00 PM</option>
+                            <option>8:30 PM</option>
+                            <option>9:00 PM</option>
+                        </datalist>
+                    </input>
+                </td>
+                <td>
+                    <input type="text" list="endtimes" name="day1end" id="Day1end">
+                    <datalist id="endtimes">
+                        <option>9:20 AM</option>
+                        <option>9:50 AM</option>
+                        <option>10:20 AM</option>
+                        <option>10:50 AM</option>
+                        <option>11:20 AM</option>
+                        <option>11:50 AM</option>
+                        <option>12:20 AM</option>
+                        <option>12:50 AM</option>
+                        <option>1:20 PM</option>
+                        <option>1:50 PM</option>
+                        <option>2:20 PM</option>
+                        <option>2:50 PM</option>
+                        <option>3:20 PM</option>
+                        <option>3:50 PM</option>
+                        <option>4:20 PM</option>
+                        <option>4:50 PM</option>
+                        <option>5:20 PM</option>
+                        <option>5:50 PM</option>
+                        <option>6:20 PM</option>
+                        <option>6:50 PM</option>
+                        <option>7:20 PM</option>
+                        <option>7:50 PM</option>
+                        <option>8:20 PM</option>
+                        <option>8:50 PM</option>
+                        <option>9:20 PM</option>
+                        <option>9:50 PM</option>
+                    </datalist>
+                </td>
+                <td>
+                   Location:  <input type="text" name="location" id="location" placeholder="ex. NCB 105B">
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+    <fieldset>
+        <legend><strong>Instructors</strong></legend>
+        <ul><li>
+            <label for = "instructor1"> Name: </label>
+            <input id = "instructor1" type="text" name="instructor1" placeholder="ex. Professor Laura Reid" required>
+            <label for = "office"> Office: </label>
+            <input id = "office" type="text" name = "office" placeholder = "ex. MC 300">
+            <label for = "hours"> Office Hours: </label>
+            <input id = "hours" type = "text" name = "hours" placeholder ="MW 3:00-4:00">
+            <label for = "email1">Email: </label>
+            <input id = "email1" type="text" name="email1" placeholder ="ex. lread4@uwo.ca">
+            <label for = "phone1">Telephone: </label>
+            <input id = "phone1" type = "text" name="phone1" placeholder = "ex. 1-519-88-4567, #23456">
+        <h4> Policies regarding contact</h4>
+            <textarea form="syllabus" name="contactPolicy" rows=10 cols=100></textarea>
+        </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend><strong>Recommended Materials</strong></legend><br>
+        <label for = "required">Required:</label><br>
+        <textarea id = "required" name="requiredMat" form="syllabus" rows=10 cols="100" required></textarea><br>
+        <label for = "recced">Recommended:</label><br>
+        <textarea id = "recced" name="reccedMat" form="syllabus" rows=10 cols="100"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend><strong>Syllabus</strong></legend>
+    </fieldset>
+    <fieldset>
+        <legend><strong>Methods of Evaluation</strong></legend>
+
+        <label for = "devices"> Electronic Devices</label><br>
+        <textarea id="devices" name="devices" rows="10" cols="100" required></textarea><br>
+        <label for="clickers">Include Statement on the Use of Personal Response Systems (clickers)?</label>
+        <input id = "clickers" name = "clickers" type = "checkbox">
+    </fieldset>
+    <fieldset>
+        <legend><strong>Handling of Medical and Non-Medical Absences</strong></legend>
+    </fieldset>
+    <fieldset>
+        <legend><strong>Procedures for Accommodation of Work</strong></legend>
+    </fieldset>
+    <fieldset>
+        <legend><strong> Accommodation for Illness</strong></legend>
+        <p>See <a href="http://www.uwo.ca/univsec/pdf/academic_policies/appeals/accommodation_illness.pdf">
+            www.uwo.ca/univsec/pdf/academic_policies/appeals/accommodation_illness.pdf</a></p>
+    </fieldset>
+
+    <fieldset>
+        <legend><strong> Suggested Policy Links and Statements</strong></legend>
+        Include:<br>
+        <input id = "includeDis" name = "includeDis" type="checkbox" onclick="{includeDisaFunc(this.checked)}">
+        <label for="includeDis">Link to policy for Accommodation for Students with Disabilities?</label><br>
+        <div id = "includeDisa"></div>
+
+        <input id = "includeRel" name = "includeRel" type="checkbox" onclick="{includeRelFunc(this.checked)}">
+        <label for = "includeRel">Link to policy for Accommodation for Religious Holidays?</label><br>
+        <div id = "includeReli"></div>
+
+        <input id = "plag" type = "checkbox" name = "plag" onclick="{plagiFunc(this.checked)}">
+        <label for = "plag">Statement on use of plagiarism-checking software?</label><br>
+        <div id = "plagi"></div>
+
+        <input id = "MC" type = "checkbox" name = "MC" onclick="{mcFunc(this.checked)}">
+        <label for = "MC">Statement on use of software to check for cheating during multiple-choice exams</label><br>
+        <div id = "mch"></div>
+
+        <input id = "learning" type = "checkbox" name = "learning" onclick = '{lssFunc(this.checked)}'>
+        <label for = "learning">Link to Learning Skills Services at Student Development Centre?</label><br>
+        <div id = "lss"></div>
+
+        <input id = "access" type = "checkbox" name = "access" onclick = "{acFunc(this.checked)}">
+        <label for = "access">Statement on Accessibility?</label><br>
+        <div id = "acc"></div>
+
+        <input id = "success" type = "checkbox" name = "success" onclick = "{strFunc(this.checked)}">
+        <label for = "success">Strategies for success in your course?</label>
+        <div id = "straS"></div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend><strong>Required Policy Links and Statements</strong></legend>
+        <p> These will be included within the completed form:
+            <ul>
+                <li>Link to Policy on Accommodation for Illness</li>
+                <li> Statement on Academic Offences </li>
+            <li>Link to website for Registrarial Services </li>
+            <li> Link to services provided by University Students' Council</li>
+            <li> Statement on Services for Students in Emotional/Mental Distress</li>
+            </ul>
+        </p>
+    </fieldset>
+    <input type="submit" value = "Create Syllabus">
+</form>
+
+
+</body>
+</html>

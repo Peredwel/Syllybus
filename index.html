@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-up Page</title>
+    <script type="text/javascript" src="./Form.js"></script>
+</head>
+<header> Sign-up for Course Syllabus Creation Page </header>
+<body>
+<p>
+    <form>
+    Name: <input type="text" id = "profname" name="ProfName" placeholder="Severus Snape"><br>
+    Username:  <input type="text" id="username" name="username" placeholder="ssnape"><br>
+    Password: <input type="password" id="password1" name="password1" placeholder="Potions"><br>
+    Confirm Password: <input type="password" id="password2" name="password2" placeholder="Potions" onchange="{checkPasswords()}"><br>
+    <input type="submit" value="Sign up">
+    </form>
+    <div id="match"></div>
+</p>
+<p> Already have an account?  <a href="./login.html">Login here</a></p>
+</body>
+</html>
